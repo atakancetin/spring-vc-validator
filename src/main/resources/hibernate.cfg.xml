@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/cvvalidator</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <mapping class="com.cvvalidator.cvvalidator.model.Category"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.CodeQuestion"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.MultipleChoiceQuestion"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.Question"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.Skill"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.Answer"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.Test"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.TestTemplate"/>
+    <mapping class="com.cvvalidator.cvvalidator.model.User"/>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
